@@ -41,6 +41,10 @@ python bilibili_title_extractor.py
 4. 点击【获取标题】按钮
 5. 几秒钟后，所有视频标题将显示在下方
 
+### 应用界面预览
+
+![B站标题提取器界面](resources/Screenshot%202025-05-04%20at%2015.15.12.png)
+
 ## 🔧 环境要求
 
 - Python 3.6 或更高版本
