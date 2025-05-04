@@ -59,32 +59,4 @@ def get_video_parts(bvid):
     
     except Exception as e:
         print(f"获取视频信息时出错: {e}")
-        return []
-
-def save_titles(titles, output_file="bilibili_titles.txt"):
-    """保存标题到文件"""
-    with open(output_file, "w", encoding="utf-8") as f:
-        for title in titles:
-            f.write(f"{title}\n")
-    print(f"已将{len(titles)}个标题保存至 {output_file}")
-    
-    # 打印标题作为示例输出
-    print("\n获取的标题:")
-    for title in titles:
-        print(title)
-
-def main():
-    # 允许通过命令行参数指定BV号
-    bvid = "BV1JV411t7ow"
-    if len(sys.argv) > 1:
-        bvid = sys.argv[1]
-    
-    print(f"正在获取视频 {bvid} 的分集标题...")
-    titles = get_video_parts(bvid)
-    if titles:
-        save_titles(titles)
-    else:
-        print("未能获取到任何标题")
-
-if __name__ == "__main__":
-    main()
+        raise e  # 向上抛出异常，让GUI程序处理 
