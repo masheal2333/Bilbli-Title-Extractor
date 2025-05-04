@@ -1,8 +1,12 @@
-# 忽略编译文件和目录
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# C extensions
 *.so
+
+# Distribution / packaging
 .Python
 build/
 develop-eggs/
@@ -20,30 +24,84 @@ wheels/
 .installed.cfg
 *.egg
 
-# 忽略所有大文件和打包目录
-Bilbli_Title_Extractor/build/
-Bilbli_Title_Extractor/dist/
-*.app
-*.zip
-*.pkg
-*.dmg
-
-# PyInstaller打包文件
+# PyInstaller
 *.manifest
 *.spec
 
-# 忽略特定大文件
-B站标题提取器_macOS.zip
-Bilbli_Title_Extractor/dist/
-Bilbli_Title_Extractor/build/
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
 
-# MacOS系统文件
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# celery beat schedule file
+celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+
+# OS specific
 .DS_Store
-.AppleDouble
-.LSOverride
+.DS_Store?
 ._*
-
-# 临时文件
-*~
-.*.swp
-.*.swo 
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
