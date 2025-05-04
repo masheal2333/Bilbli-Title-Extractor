@@ -20,6 +20,8 @@
 1. 下载本仓库
 2. 双击 `dist/B站标题提取器.app` 直接运行
 
+> **注意**：从GitHub下载仓库后，由于GitHub对大文件的限制，可能需要在本地重新打包应用。详见[常见问题](#⚠️-常见问题)部分。
+
 ### 方法二：通过脚本启动
 
 ```bash
@@ -45,7 +47,6 @@ python bilibili_title_extractor.py
 4. 点击【获取标题】按钮
 5. 几秒钟后，所有视频标题将显示在下方
 
-
 ## 🔧 环境要求
 
 - Python 3.6 或更高版本
@@ -60,6 +61,20 @@ python bilibili_title_extractor.py
 
 - **问题**: 无法提取标题
   **解决**: 检查网络连接，或尝试更换视频链接测试
+
+- **问题**: 从GitHub下载后无法运行打包好的应用
+  **解决**: 
+  1. 直接运行Python脚本：
+     ```bash
+     pip install PyQt5 requests
+     python3 bilibili_title_extractor.py
+     ```
+  2. 或者重新打包应用：
+     ```bash
+     pip install pyinstaller
+     pyinstaller bilibili_app.spec
+     # 然后运行 dist/B站标题提取器.app
+     ```
 
 ## 🛠️ 开发相关
 
