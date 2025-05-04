@@ -1,45 +1,71 @@
 # B站标题提取器
 
-这是一个简单的GUI应用程序，用于从B站视频链接中提取视频标题。
+一个简洁易用的工具，帮你一键提取B站视频/合集中的所有标题。
 
-## 功能
+## ✨ 功能特点
 
-- 输入B站视频链接或BV号
-- 提取视频所有选集的标题
-- 显示标题列表
-- 自动保存标题到文件
+- 支持输入B站视频链接或BV号
+- 自动获取视频所有分P或合集中的标题
+- 清晰展示标题列表
+- 界面简洁直观，操作便捷
 
-## 使用方法
+## 📥 安装方法
 
-1. 双击`dist/B站标题提取器.app`启动应用，或运行`./start.sh`脚本
-2. 在输入框中粘贴B站视频链接或BV号（例如：BV1JV411t7ow）
-3. 点击【获取标题】按钮
-4. 提取的标题将显示在下方文本框中，并自动保存至`bilibili_titles.txt`文件
+### 方法一：直接使用打包好的应用
 
-## 技术说明
+1. 下载本仓库
+2. 双击 `dist/B站标题提取器.app` 直接运行
 
-- 使用PyQt5构建GUI界面
-- 使用requests库获取网页内容
-- 使用正则表达式提取标题信息
-- 使用PyInstaller打包为.app应用
-
-## 解决常见问题
-
-如果启动应用时遇到问题，请尝试以下解决方法：
-1. 确保已安装所需的依赖库：`pip install PyQt5 requests`
-2. 如果应用无法启动，可能是缺少必要的依赖项。请使用以下命令重新打包：
-   ```bash
-   cd Bilibili/Bilbli_Title_Extractor
-   pyinstaller bilibili_app.spec
-   ```
-
-## 打包方法
-
-如需重新打包应用，可以使用以下命令：
+### 方法二：通过脚本启动
 
 ```bash
-cd Bilbli_Title_Extractor
+# 在终端中执行
+./start.sh
+```
+
+### 方法三：从源码运行
+
+```bash
+# 安装依赖
+pip install PyQt5 requests
+
+# 运行程序
+python bilibili_title_extractor.py
+```
+
+## 🚀 使用示例
+
+1. 启动应用
+2. 复制B站视频链接，如: `https://www.bilibili.com/video/BV1JV411t7ow`
+3. 粘贴到输入框中
+4. 点击【获取标题】按钮
+5. 几秒钟后，所有视频标题将显示在下方
+
+## 🔧 环境要求
+
+- Python 3.6 或更高版本
+- 依赖包：
+  - PyQt5 (GUI界面)
+  - requests (网络请求)
+
+## ⚠️ 常见问题
+
+- **问题**: 程序无法启动
+  **解决**: 确保已安装所需依赖 `pip install PyQt5 requests`
+
+- **问题**: 无法提取标题
+  **解决**: 检查网络连接，或尝试更换视频链接测试
+
+## 🛠️ 开发相关
+
+### 重新打包应用
+
+```bash
+# 安装打包工具
+pip install pyinstaller
+
+# 执行打包命令
 pyinstaller bilibili_app.spec
 ```
 
-打包后的应用会生成在`dist/B站标题提取器.app`目录下。 
+打包后的应用位于 `dist/B站标题提取器.app` 目录。 
